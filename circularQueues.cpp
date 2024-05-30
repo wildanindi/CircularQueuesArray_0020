@@ -29,7 +29,7 @@ class Queues {
                 REAR = 0;
             }
             else {
-                // jika rear berada di posisi terkahir array, kembali ke awal array
+                // jika REAR berada di posisi terkahir array, kembali ke awal array
                 if (REAR == max - 1)
                     REAR = 0;
                 else
@@ -38,5 +38,13 @@ class Queues {
             queue_array[REAR] = num;
         }
 
-        
+        void remove () {
+            //cek apakah antrian kosong
+            if (FRONT == -1){
+                cout << "Queue underflow\n";
+                return;
+            }
+            cout << "\n The element deleted from the queue is: " << queue_array[FRONT] << "\n";
+
+           
 };
